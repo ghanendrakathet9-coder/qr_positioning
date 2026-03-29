@@ -6,14 +6,6 @@ function toggleScanner(){
     if (scannerOn) {
         startScanner();
         mapContainer.style.display = "none";
-        btn.innerText = "CANCLE";const reader = new Html5Qrcode("camera");
-let scannerOn = false;
-
-function toggleScanner(){
-    scannerOn = !scannerOn;
-    if (scannerOn) {
-        startScanner();
-        mapContainer.style.display = "none";
         btn.innerText = "CANCEL";
     }else {
         stopScanner();
@@ -43,10 +35,4 @@ function showMarkerAt(top, left, name, inStock, price) {
     document.getElementById("itemName").innerText = "Name: " + name;
     document.getElementById("itemStock").innerText = "In store: " + (inStock ? "Yes" : "No");
     document.getElementById("itemPrice").innerText = "Price: " + price + "€";
-}
-    }else {
-        stopScanner();
-        mapContainer.style.display = "block";
-        btn.innerText = "SCAN";
-    }
 }
